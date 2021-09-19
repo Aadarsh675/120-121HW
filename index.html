@@ -1,0 +1,187 @@
+<html>
+<head>
+  <title>Case Study Between Google Lens and MobileNet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<center>
+      <h4 id="heading">Case Study Between Google Lens and MobileNet</h3>
+      <img src="lens.png">
+      <h4>VS</h4>
+      <h1 >MobileNet</h1>
+      <div class="heading_div">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          1. Water Bottle
+          <img id="water_bottle_img" src="SS-CY0001-001_Water_Bottle__35927.1591898350.png">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h5 style="background-color: white;">Output on Google Lens - Water Bottle<span></span></h5>
+          <h5 style="background-color: white;">Output on MobileNet - Water Bottle<span></span></h5>
+        </div>
+        <div class="mini_result">
+          <hr>
+          <h4>Result - Draw</h4>
+          <h4></h4>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="heading_div">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          2. Ring
+          <img id="ring_img" src="Diamond-Wedding-Ring-PNG.png">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h5 style="background-color: white;">Output on Google Lens - Ring<span></span></h5>
+          <h5 style="background-color: white;">Output on MobileNet - Hoop<span></span></h5>
+        </div>
+        <div class="mini_result">
+          <hr>
+          <h4>Result - Google Lens is more accurate</h4>
+          <h4></h4>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="heading_div">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          3. Pillow
+          <img id="pillow_img" src="d6435461b5b4e9a3a40a3019d4b9241e.png">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h5 style="background-color: white;">Output on Google Lens - Pillow<span></span></h5>
+          <h5 style="background-color: white;">Output on MobileNet - Plush<span></span></h5>
+        </div>
+        <div class="mini_result">
+          <hr>
+          <h4>Result - Google Lens is more accurate</h4>
+          <h4></h4>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="heading_div">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          4. Bed
+          <img id="bed_img" src="20031533_hero_wide.webp">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h5 style="background-color: white;">Output on Google Lens - Bed<span></span></h5>
+          <h5 style="background-color: white;">Output on MobileNet - Mattress<span></span></h5>
+        </div>
+        <div class="mini_result">
+          <hr>
+          <h4>Result - Google Lens is more accurate</h4>
+          <h4></h4>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="heading_div">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          5. Air Conditioner
+          <img id="air_conditioner_img" src="air_conditioner_PNG24.png">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h5 style="background-color: white;">Output on Google Lens - Air Conditioner<span></span></h5>
+          <h5 style="background-color: white;">Output on MobileNet - Air Conditioner<span></span></h5>
+        </div>
+        <div class="mini_result">
+          <hr>
+          <h4>Result - Draw</h4>
+          <h4></h4>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="heading_div">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          6. Mobile
+          <img id="mobile_img" src="Apple-iPhone-12-Blue-backimage.webp">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h5 style="background-color: white;">Output on Google Lens - Mobile<span></span></h5>
+          <h5 style="background-color: white;">Output on MobileNet - Mobile<span></span></h5>
+        </div>
+        <div class="mini_result">
+          <hr>
+          <h4>Result - Draw</h4>
+          <h4></h4>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="heading_div">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          7. Ceiling Fan
+          <img id="ceiling_fan_img" src="fan-png_6021c602b1081.png">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h5 style="background-color: white;">Output on Google Lens - Ceiling Fan<span></span></h5>
+          <h5 style="background-color: white;">Output on MobileNet - Fan<span></span></h5>
+        </div>
+        <div class="mini_result">
+          <hr>
+          <h4>Result - Google Lens is more accurate</h4>
+          <h4></h4>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="heading_div">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          8. Spoon
+          <img id="spoon_img" src="Standard_20table_20spoon_20Albi_20_20Sterling_20silver_01407022000101_F_2_1.png">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h5 style="background-color: white;">Output on Google Lens - Spoon<span></span></h5>
+          <h5 style="background-color: white;">Output on MobileNet - Spoon<span></span></h5>
+        </div>
+        <div class="mini_result">
+          <hr>
+          <h4>Result - Draw</h4>
+          <h4></h4>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="heading_div">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          9. Shirt
+          <img id="shirt_img" src="UJN396_1JEY_F0009_S_202_SLF.webp">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h5 style="background-color: white;">Output on Google Lens - Shirt<span></span></h5>
+          <h5 style="background-color: white;">Output on MobileNet - T-Shirt<span></span></h5>
+        </div>
+        <div class="mini_result">
+          <hr>
+          <h4>Result - Draw</h4>
+          <h4></h4>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="heading_div2">
+        Out of 9 images, Google Lens got 4 out of 9 correct, and for 5 out of 9 images, both got it correct. Google Lens is more accurate.
+      </div>
+      <br>
+      <br>
+</center>
+
+<div class="copy_right_footer">
+  Developed By Aadarsh
+</div>
+
+<script src="main.js"></script>
+</body>
+
+</html>
